@@ -5,8 +5,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "true",
-    "start": "true"
+    "build": "react-scripts build",
+    "dev:react": "react-scripts start",
+    "dev:storybook": "rnstl && start-storybook -p 9009 -s public --ci",
+    "start": "run-p dev:*"
   },
   "dependencies": {
     "classnames": "2.2.6",
