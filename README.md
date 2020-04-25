@@ -1,2 +1,3 @@
-# ui-system
+# UI System
+
 My personal design system 📏

@@ -8,6 +8,7 @@
     "build": "react-scripts build",
     "dev:react": "react-scripts start",
     "dev:storybook": "rnstl && start-storybook -p 9009 -s public --ci",
+    "format": "prettier --write '**/**/*.{js,ts,css,scss,html,md,yaml,yml}'",
     "start": "run-p dev:*"
   },
   "dependencies": {
