@@ -1,0 +1,8 @@
+:root {
+  --ui-system-box: 0px;
+}
+
+.Box {
+  background: #eee;
+  padding: var(--ui-system-box);
+}
