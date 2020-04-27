@@ -1,14 +1,24 @@
 import React from "react";
 
 import Text from "./Text";
+import * as colors from "../theme/colors";
 
-export const main = () => (
-  <div>
-    <Text size={16}>Hello world!</Text>
-    <Text size={36}>Hello world!</Text>
-    <Text size={36}>Hello world!</Text>
-    <Text size={56}>Hello world!</Text>
-  </div>
-);
+export const main = () => {
+  let sizes = [4, 8, 10, 12, 14, 16, 18, 24, 32, 48];
+  sizes = [].concat(sizes, sizes.slice().reverse());
+
+  return (
+    <div
+      style={{
+        background: colors.PRIMARY_COLORS.c10,
+        border: `1px solid ${colors.PRIMARY_COLORS.c9}`,
+      }}
+    >
+      {sizes.map((s) => (
+        <Text size={s}>Hello design system!</Text>
+      ))}
+    </div>
+  );
+};
 
 export default { title: "Text" };
