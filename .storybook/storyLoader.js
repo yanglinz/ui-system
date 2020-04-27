@@ -5,10 +5,12 @@
 
 function loadStories() {
 	require('../src/layout/Box.story');
+	require('../src/layout/Text.story');
 }
 
 const stories = [
-	'../src/layout/Box.story'
+	'../src/layout/Box.story',
+	'../src/layout/Text.story'
 ];
 
 module.exports = {

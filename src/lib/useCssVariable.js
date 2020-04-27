@@ -1,14 +1,28 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useCallback, createRef } from "react";
 
-function useCssVariable(name, value) {
-  let formattedValue = value;
+function formatValue(value) {
+  let formatted = value;
   if (Number.isInteger(value)) {
-    formattedValue = `${value}px`;
+    formatted = `${value}px`;
   }
-
-  useLayoutEffect(() => {
-    document.documentElement.style.setProperty(name, formattedValue);
-  });
+  return formatted;
 }
 
-export default useCssVariable;
+export function useGlobalCssVariable(name, value) {
+  useLayoutEffect(() => {
+    document.documentElement.style.setProperty(name, formatValue(value));
+  }, []);
+}
+
+export function useLocalCssVariable(name, value) {
+  const ref = createRef(null);
+  const setRef = useCallback((node) => {
+    ref.current = node;
+  }, []);
+
+  useLayoutEffect(() => {
+    ref.current.style.setProperty(name, formatValue(value));
+  }, [ref, setRef]);
+
+  return setRef;
+}
