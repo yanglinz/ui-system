@@ -1,4 +1,4 @@
-import { useLayoutEffect, useCallback, createRef } from "react";
+import { useLayoutEffect } from "react";
 
 function formatValue(value) {
   let formatted = value;
@@ -11,18 +11,11 @@ function formatValue(value) {
 export function useGlobalCssVariable(name, value) {
   useLayoutEffect(() => {
     document.documentElement.style.setProperty(name, formatValue(value));
-  }, []);
+  }, [name, value]);
 }
 
-export function useLocalCssVariable(name, value) {
-  const ref = createRef(null);
-  const setRef = useCallback((node) => {
-    ref.current = node;
-  }, []);
-
+export function useLocalCssVariable(ref, name, value) {
   useLayoutEffect(() => {
     ref.current.style.setProperty(name, formatValue(value));
-  }, [ref, setRef]);
-
-  return setRef;
+  }, [ref, name, value]);
 }

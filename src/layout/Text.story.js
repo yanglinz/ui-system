@@ -14,8 +14,10 @@ export const main = () => {
         border: `1px solid ${colors.PRIMARY_COLORS.c9}`,
       }}
     >
-      {sizes.map((s) => (
-        <Text size={s}>Hello design system!</Text>
+      {sizes.map((s, i) => (
+        <Text key={i} size={s}>
+          Hello design system!
+        </Text>
       ))}
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef } from "react";
 import classNames from "classnames";
 
 import { useLocalCssVariable } from "../lib/useCssVariable";
@@ -12,7 +12,9 @@ import styles from "./Text.module.css";
 function Text(props) {
   const size = props.size || 16;
 
-  const ref = useLocalCssVariable("--ui-system-text-size", size);
+  const ref = createRef();
+  useLocalCssVariable(ref, "--ui-system-text-size", size);
+
   return (
     <div
       ref={ref}
