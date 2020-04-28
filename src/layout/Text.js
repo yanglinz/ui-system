@@ -17,10 +17,10 @@ function Text(props) {
 
   return (
     <div
-      ref={ref}
       className={classNames(styles.Text, {
         [styles.TextWithOffset]: size > 10,
       })}
+      ref={ref}
     >
       {props.children}
     </div>
