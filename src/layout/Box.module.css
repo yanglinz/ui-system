@@ -1,7 +1,7 @@
 :root {
-  --ui-system-box: 8px;
+  --ui-system-box-padding: 8px;
 }
 
 .Box {
-  padding: var(--ui-system-box);
+  padding: var(--ui-system-box-padding);
 }
