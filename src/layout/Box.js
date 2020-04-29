@@ -6,21 +6,12 @@ import { parseResponsive } from "../lib/responsive";
 import styles from "./Box.module.css";
 
 function Box(props) {
-  const padding = props.padding || 8;
-  const responsivePadding = parseResponsive(padding);
+  const padding = parseResponsive(props.padding || 8);
 
   const ref = createRef(null);
-  useLocalCssVariable(ref, "--ui-system-box-padding", responsivePadding.mobile);
-  useLocalCssVariable(
-    ref,
-    "--ui-system-box-padding-tablet",
-    responsivePadding.tablet
-  );
-  useLocalCssVariable(
-    ref,
-    "--ui-system-box-padding-desktop",
-    responsivePadding.desktop
-  );
+  useLocalCssVariable(ref, "--ui-system-box-padding", padding.mobile);
+  useLocalCssVariable(ref, "--ui-system-box-padding-tablet", padding.tablet);
+  useLocalCssVariable(ref, "--ui-system-box-padding-desktop", padding.desktop);
 
   return (
     <div className={styles.Box} ref={ref}>
