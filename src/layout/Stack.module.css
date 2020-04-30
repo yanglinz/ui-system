@@ -1,0 +1,7 @@
+:root {
+}
+
+.Stack {
+  display: flex;
+  flex-direction: column;
+}
