@@ -11,9 +11,9 @@
     "format": "prettier --write '**/**/*.{js,ts,css,scss,html,md,yaml,yml}'",
     "start": "run-p dev:*"
   },
-  "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
