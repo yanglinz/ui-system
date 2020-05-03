@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "build": "react-scripts build",
     "dev:react": "react-scripts start",
