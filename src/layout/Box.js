@@ -5,7 +5,7 @@ import { parseResponsive } from "../lib/responsive";
 
 import styles from "./Box.module.css";
 
-function Box(props) {
+export function Box(props) {
   const padding = parseResponsive(props.padding || 8);
 
   const ref = createRef(null);
