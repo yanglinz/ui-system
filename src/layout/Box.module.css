@@ -1,4 +1,4 @@
-:root {
+:local .Box {
   --ui-system-box-padding: 8px;
   --ui-system-box-padding-tablet: 8px;
   --ui-system-box-padding-desktop: 8px;
