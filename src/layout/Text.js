@@ -10,6 +10,7 @@ import styles from "./Text.module.css";
  * https://github.com/seek-oss/braid-design-system/blob/dc052d40889d6f584971480b21bb6596ff4ec5b1/lib/hooks/typography/basekick.ts
  */
 export function Text(props) {
+  const className = props.className;
   const size = parseResponsive(props.size || 16);
 
   const ref = createRef();
@@ -17,8 +18,12 @@ export function Text(props) {
   useLocalCssVariable(ref, "--ui-system-text-size-tablet", size.tablet);
   useLocalCssVariable(ref, "--ui-system-text-desktop", size.desktop);
 
+  let clsName = [className, styles.Text];
+  clsName = clsName.filter(Boolean);
+  clsName = clsName.join(" ");
+
   return (
-    <div className={styles.Text} ref={ref}>
+    <div className={clsName} ref={ref}>
       {props.children}
     </div>
   );
