@@ -8,27 +8,30 @@
     "dev:react": "react-scripts start",
     "dev:storybook": "rnstl && start-storybook -p 9009 -s public --ci",
     "format": "prettier --write '**/**/*.{js,ts,css,scss,html,md,yaml,yml}'",
-    "start": "run-p dev:*"
+    "dev": "run-p dev:*"
+  },
+  "dependencies": {
+    "next": "10.0.0",
+    "next-plugin-preact": "3.0.3",
+    "preact": "10.5.5",
+    "preact-render-to-string": "5.1.11",
+    "react": "npm:@preact/compat@0.0.3",
+    "react-dom": "npm:@preact/compat@0.0.3",
+    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "7.9.0",
     "@percy/storybook": "3.3.0",
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-links": "5.3.18",
     "@storybook/addons": "5.3.18",
     "@storybook/react": "5.3.18",
     "@types/react": "16.9.34",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.2.2",
     "npm-run-all": "4.1.5",
     "prettier": "2.0.5",
-    "react-native-storybook-loader": "1.8.1",
+    "react-native-storybook-loader": "1.8.1"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "config": {
     "react-native-storybook-loader": {
       "searchDir": [
@@ -41,14 +44,5 @@
   "volta": {
     "node": "14.17.2",
     "yarn": "1.22.5"
-  },
-  "dependencies": {
-    "next": "10.0.0",
-    "next-plugin-preact": "^3.0.3",
-    "preact": "^10.5.5",
-    "preact-render-to-string": "^5.1.11",
-    "react": "npm:@preact/compat@0.0.3",
-    "react-dom": "npm:@preact/compat@0.0.3",
-    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.1.2"
   }
 }
