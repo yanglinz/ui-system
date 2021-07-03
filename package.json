@@ -10,10 +10,6 @@
     "format": "prettier --write '**/**/*.{js,ts,css,scss,html,md,yaml,yml}'",
     "start": "run-p dev:*"
   },
-  "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@percy/storybook": "3.3.0",
@@ -44,8 +40,8 @@
     }
   },
   "volta": {
-    "node": "12.16.1",
-    "yarn": "1.22.4"
+    "node": "14.17.2",
+    "yarn": "1.22.5"
   },
   "dependencies": {}
 }
