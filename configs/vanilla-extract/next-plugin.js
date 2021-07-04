@@ -10,6 +10,8 @@ const {
 function withVanillaExtract(pluginOptions = {}) {
   return (nextConfig = {}) => {
     return {
+      ...nextConfig,
+
       // For Webpack 4, you'll need to install it separately
       future: {
         webpack5: true,
