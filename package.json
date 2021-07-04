@@ -8,7 +8,7 @@
     "dev:main": "next",
     "dev:storybook": "rnstl && start-storybook -p 9009 -s public --ci",
     "dev": "run-p dev:*",
-    "build:main": "next build",
+    "build:main": "next build && next export",
     "build": "run-s build:*"
   },
   "dependencies": {

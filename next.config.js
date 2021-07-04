@@ -5,6 +5,7 @@ const withVanillaExtract = require("./configs/vanilla-extract/next-plugin");
 
 module.exports = withVanillaExtract()(
   withPreact({
-    // Empty next.js config
+    basePath: "/next",
+    distDir: "build/next",
   })
 );
