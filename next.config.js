@@ -3,5 +3,5 @@ const preact = require("preact");
 const withPreact = require("next-plugin-preact");
 
 module.exports = withPreact({
-  basePath: "/foo/bar",
+  // Empty next.js config
 });
