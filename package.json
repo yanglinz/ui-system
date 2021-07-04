@@ -5,10 +5,11 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write '**/**/*.{js,ts,css,scss,html,md,yaml,yml}'",
-    "dev:react": "react-scripts start",
+    "dev:main": "next",
     "dev:storybook": "rnstl && start-storybook -p 9009 -s public --ci",
     "dev": "run-p dev:*",
-    "build": "react-scripts build"
+    "build:main": "next build",
+    "build": "run-s build:*"
   },
   "dependencies": {
     "next": "10.0.0",
