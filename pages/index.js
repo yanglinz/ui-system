@@ -1,6 +1,8 @@
+import { indexStyle } from "./index.css.ts";
+
 function Index() {
   return (
-    <div>
+    <div className={indexStyle}>
       <h1>Hello world!</h1>
     </div>
   );
