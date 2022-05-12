@@ -1,4 +1,5 @@
 .next/
 build/
+dist/
 storybook-static/
 package.json
