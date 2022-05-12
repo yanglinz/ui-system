@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/preact-layers" 
+  ],
   "scripts": {
     "format": "prettier --write '**/**/*.{js,ts,css,scss,html,md,yaml,yml}'",
     "dev:main": "next",
