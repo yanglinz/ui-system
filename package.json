@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/preact-composite",
+    "packages/preact-layers",
+    "packages/preact-layout"
+  ],
   "scripts": {
-    "format": "prettier --write '**/**/*.{js,ts,css,scss,html,md,yaml,yml}'",
+    "format": "prettier --write '**/**/*.{js,jsx,ts,tsx,css,scss,html,md,yaml,yml}'",
     "dev:main": "next",
     "dev:storybook": "rnstl && start-storybook -p 9009 -s public --ci",
     "dev": "run-p dev:*",
@@ -48,7 +54,7 @@
     }
   },
   "volta": {
-    "node": "14.17.2",
-    "yarn": "1.22.5"
+    "node": "16.15.0",
+    "yarn": "1.22.18"
   }
 }
