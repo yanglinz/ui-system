@@ -13,39 +13,15 @@
     "build": "run-s build:main build:storybook"
   },
   "dependencies": {
-    "next": "10.0.0",
-    "next-plugin-preact": "3.0.3",
-    "preact": "10.5.5",
-    "preact-render-to-string": "5.1.11",
-    "react": "npm:@preact/compat@0.0.3",
-    "react-dom": "npm:@preact/compat@0.0.3",
-    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.1.2"
+    "preact": "^10.5.5"
   },
   "devDependencies": {
-    "@babel/core": "7.14.6",
-    "@percy/storybook": "3.3.1",
-    "@storybook/addon-actions": "6.3.2",
-    "@storybook/addon-links": "6.3.2",
-    "@storybook/addons": "6.3.2",
-    "@storybook/react": "6.3.2",
-    "@types/react": "17.0.13",
     "@vanilla-extract/babel-plugin": "^1.0.0",
     "@vanilla-extract/css": "^1.1.0",
     "@vanilla-extract/webpack-plugin": "^1.0.3",
-    "babel-loader": "^8.2.2",
-    "npm-run-all": "4.1.5",
-    "prettier": "2.3.2",
-    "react-native-storybook-loader": "2.0.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2",
     "typescript": "^4.3.5"
-  },
-  "config": {
-    "react-native-storybook-loader": {
-      "searchDir": [
-        "./src"
-      ],
-      "pattern": "**/*.story.js",
-      "outputFile": "./.storybook/storyLoader.js"
-    }
   },
   "volta": {
     "node": "16.15.0",
