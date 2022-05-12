@@ -5,7 +5,9 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/preact-layers" 
+    "packages/preact-composite",
+    "packages/preact-layers",
+    "packages/preact-layout"
   ],
   "scripts": {
     "format": "prettier --write '**/**/*.{js,jsx,ts,tsx,css,scss,html,md,yaml,yml}'",
