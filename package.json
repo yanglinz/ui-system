@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "format": "prettier --write '**/**/*.{js,jsx,ts,tsx,css,scss,html,md,yaml,yml}'",
-    "dev:main": "true",
+    "dev:vite": "vite",
     "dev": "run-p dev:*",
     "build:vite": "vite build",
     "build": "run-s build:*"
