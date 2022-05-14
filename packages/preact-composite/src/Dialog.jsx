@@ -1,4 +1,4 @@
-import Layer from "../../preact-layers/src/Layer";
+import Layer from "@self/preact-layers/src/Layer";
 
 function Dialog(props) {
   const { isOpen } = props;
