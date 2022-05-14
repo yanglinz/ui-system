@@ -1,10 +1,14 @@
+import Layer from "../../preact-layers/src/Layer";
+
 function Dialog(props) {
   const { isOpen } = props;
 
   return (
-    <div role="dialog" aria-modal>
-      {props.children}
-    </div>
+    <Layer>
+      <div role="dialog" aria-modal>
+        {props.children}
+      </div>
+    </Layer>
   );
 }
 

@@ -21,7 +21,7 @@ function DialogStory() {
 export function App() {
   return (
     <>
-      <LayerProvider>
+      <LayerProvider mount={document.getElementById("app-layers")}>
         <DialogStory />
       </LayerProvider>
     </>
