@@ -1,4 +1,6 @@
-function Dialog() {
+function Dialog(props) {
+  const { isOpen } = props;
+
   return <>Hello world!</>;
 }
 

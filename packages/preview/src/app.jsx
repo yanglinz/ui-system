@@ -5,9 +5,7 @@ export function App() {
   return (
     <>
       <LayerProvider>
-        <Diaglog>
-          Hello world!
-        </Diaglog>
+        <Diaglog>Hello world!</Diaglog>
 
         <p>Hello world!</p>
       </LayerProvider>
