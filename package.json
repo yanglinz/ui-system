@@ -4,21 +4,21 @@
   "main": "main.js",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "packages/preact-composite",
-    "packages/preact-layers",
-    "packages/preact-layout"
-  ],
   "scripts": {
     "format": "prettier --write '**/**/*.{js,jsx,ts,tsx,css,scss,html,md,yaml,yml}'",
-    "dev:main": "true",
+    "dev:vite": "vite",
     "dev": "run-p dev:*",
-    "build:main": "true",
-    "build": "run-s build:*"
+    "build:vite": "vite build",
+    "build": "run-s build:* && cp -R src/preview/dist dist"
+  },
+  "dependencies": {
+    "preact": "^10.5.15"
   },
   "devDependencies": {
+    "@preact/preset-vite": "^2.1.5",
     "npm-run-all": "4.1.5",
-    "prettier": "2.3.2"
+    "prettier": "2.3.2",
+    "vite": "^2.9.9"
   },
   "volta": {
     "node": "16.15.0",
