@@ -1,7 +1,5 @@
 import { createContext } from "preact";
 
-import RichTextArea from "preact-richtextarea";
-
 export const LayerProviderContext = createContext("layers");
 
 function LayerProvider(props) {
@@ -10,8 +8,6 @@ function LayerProvider(props) {
   return (
     <LayerProviderContext.Provider value={mount}>
       {props.children}
-
-      <RichTextArea />
     </LayerProviderContext.Provider>
   );
 }
