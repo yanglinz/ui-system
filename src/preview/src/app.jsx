@@ -1,7 +1,7 @@
 import { useState } from "preact/hooks";
 
-import LayerProvider from "../../preact-primitive/src/LayerProvider";
-import Diaglog from "@self/preact-composite/src/Dialog";
+import LayerProvider from "../../preact-primitive/LayerProvider";
+import Diaglog from "../../preact-composite/Dialog";
 
 function DialogStory() {
   const [showDialog, setShowDialog] = useState(false);
