@@ -4,10 +4,6 @@
   "main": "main.js",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "packages/preact-composite",
-    "packages/preact-layers"
-  ],
   "scripts": {
     "format": "prettier --write '**/**/*.{js,jsx,ts,tsx,css,scss,html,md,yaml,yml}'",
     "dev:main": "true",
