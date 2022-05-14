@@ -1,6 +1,6 @@
 import { useState } from "preact/hooks";
 
-import LayerProvider from "@self/preact-layers/src/LayerProvider";
+import LayerProvider from "../../preact-primitive/src/LayerProvider";
 import Diaglog from "@self/preact-composite/src/Dialog";
 
 function DialogStory() {
