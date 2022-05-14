@@ -9,9 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.5.15",
-    "preact-portal": "^1.1.3",
-    "preact-richtextarea": "^1.2.1"
+    "preact": "^10.5.15"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.1.5",
