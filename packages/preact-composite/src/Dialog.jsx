@@ -1,7 +1,7 @@
 function Dialog(props) {
   const { isOpen } = props;
 
-  return <>Hello world!</>;
+  return <>{props.children}</>;
 }
 
 export default Dialog;

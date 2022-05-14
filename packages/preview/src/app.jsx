@@ -8,7 +8,14 @@ function DialogStory() {
   const open = () => setShowDialog(true);
   const close = () => setShowDialog(false);
 
-  return <Diaglog isOpen={showDialog}>Hello world!</Diaglog>;
+  return (
+    <>
+      <button onClick={open}>Show Dialog</button>
+      <Diaglog isOpen={showDialog}>
+        <p>Hello there. I am a dialog</p>
+      </Diaglog>
+    </>
+  );
 }
 
 export function App() {
