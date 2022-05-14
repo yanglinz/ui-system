@@ -8,7 +8,7 @@
     "format": "prettier --write '**/**/*.{js,jsx,ts,tsx,css,scss,html,md,yaml,yml}'",
     "dev:main": "true",
     "dev": "run-p dev:*",
-    "build:main": "true",
+    "build:vite": "vite build",
     "build": "run-s build:*"
   },
   "dependencies": {
