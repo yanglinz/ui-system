@@ -12,7 +12,8 @@
     "build": "run-s build:* && cp -R src/preview/dist dist"
   },
   "dependencies": {
-    "preact": "^10.5.15"
+    "preact": "^10.5.15",
+    "preact-router": "^4.1.2"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.1.5",
