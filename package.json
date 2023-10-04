@@ -9,7 +9,7 @@
     "dev:story": "vite",
     "dev": "run-p dev:*",
     "build:vite": "vite build",
-    "build": "run-s build:* && cp -R src/preview/dist dist"
+    "build": "run-s build:*"
   },
   "dependencies": {
     "preact": "^10.5.15",
