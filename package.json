@@ -1,18 +1,19 @@
 {
   "name": "ui-system",
   "version": "0.1.0",
-  "main": "main.js",
+  "main": "index.js",
   "license": "MIT",
   "private": true,
   "scripts": {
     "format": "prettier --write '**/**/*.{js,jsx,ts,tsx,css,scss,html,md,yaml,yml}'",
-    "dev:vite": "vite",
+    "dev:story": "vite",
     "dev": "run-p dev:*",
     "build:vite": "vite build",
-    "build": "run-s build:* && cp -R src/preview/dist dist"
+    "build": "run-s build:*"
   },
   "dependencies": {
-    "preact": "^10.5.15"
+    "preact": "^10.5.15",
+    "preact-router": "^4.1.2"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.1.5",

@@ -1,7 +1,10 @@
-import Layer from "../preact-primitive/Layer";
+import Layer, { useCurrentLayer } from "./Layer";
 
 function Dialog(props) {
   const { isOpen } = props;
+  if (!isOpen) {
+    return null;
+  }
 
   return (
     <Layer>
