@@ -1,19 +1,31 @@
+import { useState } from "preact/hooks";
 import { RootLayer } from "../src/Layer";
 import Dialog from "../src/Dialog";
 
+function DialogTrigger(props) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setIsOpen(true)}>Open Dialog</button>
+      <Dialog isOpen={isOpen}>{props.children}</Dialog>
+    </div>
+  );
+}
+
 function BasicDialog() {
   return (
-    <Dialog>
+    <DialogTrigger>
       <h1>Basic Dialog</h1>
-    </Dialog>
+    </DialogTrigger>
   );
 }
 
 function NestedDialog() {
   return (
-    <Dialog>
+    <DialogTrigger>
       <h1>Nested Dialog</h1>
-    </Dialog>
+    </DialogTrigger>
   );
 }
 

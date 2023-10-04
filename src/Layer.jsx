@@ -43,7 +43,7 @@ class LayerManager {
   }
 
   popLayer() {
-    const childLayer = this.childLayer
+    const childLayer = this.childLayer;
     childLayer.destroy();
 
     this.childLayer = null;
@@ -51,7 +51,7 @@ class LayerManager {
   }
 
   destroy() {
-    // TODO: Handle DOM node cleanup 
+    // TODO: Handle DOM node cleanup
   }
 }
 
@@ -109,7 +109,7 @@ function Layer(props) {
     <CurrentLayerContext.Provider value={layer}>
       {createPortal(props.children, layer.node)}
     </CurrentLayerContext.Provider>
-  ): null;
+  ) : null;
 }
 
 export default Layer;
