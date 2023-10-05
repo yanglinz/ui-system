@@ -1,6 +1,7 @@
 import Router from "preact-router";
 import DialogPreviews from "./DialogPreviews";
 import { render } from "preact";
+import "../src/index.css";
 
 function Nav() {
   return (
