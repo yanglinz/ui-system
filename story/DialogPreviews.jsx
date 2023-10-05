@@ -8,7 +8,7 @@ function DialogTrigger(props) {
   return (
     <div>
       <button
-        className="border border-stone-300 bg-stone-100 p-1"
+        className="bg-stone-100 border border-stone-400 p-1 rounded-sm"
         onClick={() => setIsOpen(true)}
       >
         Open Dialog
