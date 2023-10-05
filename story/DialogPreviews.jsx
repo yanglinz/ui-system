@@ -7,7 +7,12 @@ function DialogTrigger(props) {
 
   return (
     <div>
-      <button onClick={() => setIsOpen(true)}>Open Dialog</button>
+      <button
+        className="border border-stone-300 bg-stone-100 p-1"
+        onClick={() => setIsOpen(true)}
+      >
+        Open Dialog
+      </button>
       <Dialog isOpen={isOpen}>{props.children}</Dialog>
     </div>
   );
