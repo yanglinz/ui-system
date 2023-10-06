@@ -9,11 +9,19 @@ function AlertButton() {
   return <Button>Hello world!</Button>;
 }
 
+const previews = [
+  [BasicButton, "Basic Button"],
+  [AlertButton, "Alert Button"],
+];
+
 export default function ButtonPreviews() {
-  return [BasicButton, AlertButton].map((c) => {
+  return previews.map((p) => {
+    const [Component, title] = p;
     return (
       <div className="mb-4">
-        <PreviewStory title={c.name}>{c()}</PreviewStory>
+        <PreviewStory title={title}>
+          <Component />
+        </PreviewStory>
       </div>
     );
   });

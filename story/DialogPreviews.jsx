@@ -41,12 +41,21 @@ function DialogPreviewWrapper(props) {
   return <RootLayer>{props.children}</RootLayer>;
 }
 
+const previews = [
+  [BasicDialog, "Basic Dialog"],
+  [NestedDialog, "Nested Dialog"],
+];
+
 export default function DialogPreviews() {
-  return [BasicDialog, NestedDialog].map((c, i) => {
+  return previews.map((p, i) => {
+    const [Component, name] = p;
+
     return (
       <div className="mb-4">
-        <PreviewStory title={c.name}>
-          <DialogPreviewWrapper key={i}>{c()}</DialogPreviewWrapper>
+        <PreviewStory title={name}>
+          <DialogPreviewWrapper key={i}>
+            <Component />
+          </DialogPreviewWrapper>
         </PreviewStory>
       </div>
     );
