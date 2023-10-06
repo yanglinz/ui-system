@@ -1,6 +1,7 @@
 import { useState } from "preact/hooks";
 import { RootLayer } from "../src/Layer";
 import Dialog from "../src/Dialog";
+import PreviewStory from "./PreviewStory";
 
 function DialogTrigger(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +43,12 @@ function DialogPreviewWrapper(props) {
 
 export default function DialogPreviews() {
   return [BasicDialog, NestedDialog].map((c, i) => {
-    return <DialogPreviewWrapper key={i}>{c()}</DialogPreviewWrapper>;
+    return (
+      <div className="mb-4">
+        <PreviewStory title={c.name}>
+          <DialogPreviewWrapper key={i}>{c()}</DialogPreviewWrapper>
+        </PreviewStory>
+      </div>
+    );
   });
 }
