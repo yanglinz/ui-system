@@ -1,47 +1,12 @@
 import { useState } from "preact/hooks";
-import { RootLayer } from "../src/Layer";
-import Dialog from "../src/Dialog";
-
-function DialogTrigger(props) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div>
-      <button
-        className="bg-stone-100 border border-stone-400 p-1 rounded-sm"
-        onClick={() => setIsOpen(true)}
-      >
-        Open Dialog
-      </button>
-      <Dialog isOpen={isOpen}>{props.children}</Dialog>
-    </div>
-  );
-}
+import Button from "../src/Button";
 
 function BasicDialog() {
-  return (
-    <DialogTrigger>
-      <h1>Basic Dialog</h1>
-    </DialogTrigger>
-  );
-}
-
-function NestedDialog() {
-  return (
-    <DialogTrigger>
-      <h1>Nested Dialog</h1>
-    </DialogTrigger>
-  );
-}
-
-function DialogPreviewWrapper(props) {
-  // TODO: Layer provider need to use an id provided
-  const { key } = props;
-  return <RootLayer>{props.children}</RootLayer>;
+  return <Button>Hello world!</Button>;
 }
 
 export default function DialogPreviews() {
-  return [BasicDialog, NestedDialog].map((c, i) => {
-    return <DialogPreviewWrapper key={i}>{c()}</DialogPreviewWrapper>;
+  return [BasicDialog].map((c, i) => {
+    return c();
   });
 }

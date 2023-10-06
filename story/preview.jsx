@@ -9,6 +9,8 @@ function Nav() {
     <ul>
       <li>
         <a href="/button">Button Previews</a>
+      </li>
+      <li>
         <a href="/dialog">Dialog Previews</a>
       </li>
     </ul>
