@@ -1,12 +1,16 @@
-import { useState } from "preact/hooks";
+import PreviewStory from "./PreviewStory";
 import Button from "../src/Button";
 
-function BasicDialog() {
+function BasicButton() {
+  return <Button>Hello world!</Button>;
+}
+
+function AlertButton() {
   return <Button>Hello world!</Button>;
 }
 
 export default function ButtonPreviews() {
-  return [BasicDialog].map((c, i) => {
-    return c();
+  return [BasicButton, AlertButton].map((c) => {
+    return <PreviewStory>{c()}</PreviewStory>;
   });
 }
