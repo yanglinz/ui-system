@@ -2,7 +2,7 @@ import Router from "preact-router";
 import ButtonPreview from "./ButtonPreview";
 import DialogPreviews from "./DialogPreviews";
 import { render } from "preact";
-import "../src/index.css";
+import "./preview.css";
 
 function Nav() {
   return (

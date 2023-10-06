@@ -5,7 +5,7 @@ function BasicDialog() {
   return <Button>Hello world!</Button>;
 }
 
-export default function DialogPreviews() {
+export default function ButtonPreviews() {
   return [BasicDialog].map((c, i) => {
     return c();
   });
