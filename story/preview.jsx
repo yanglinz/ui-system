@@ -1,14 +1,29 @@
 import Router from "preact-router";
+import ButtonPreview from "./ButtonPreview";
 import DialogPreviews from "./DialogPreviews";
 import { render } from "preact";
-import "../src/index.css";
+import "./preview.css";
+
+const previews = [
+  [ButtonPreview, "button"],
+  [DialogPreviews, "dialog"],
+];
 
 function Nav() {
   return (
-    <ul>
-      <li>
-        <a href="/dialog">Dialog Previews</a>
-      </li>
+    <ul className="m-4">
+      {previews.map((p) => {
+        const [_, path] = p;
+        return (
+          <li key={path} className="ml-1">
+            <span className="text-sm">
+              <a href={`/${path}`}>
+                <span className="capitalize">{path}</span> Preview
+              </a>
+            </span>
+          </li>
+        );
+      })}
     </ul>
   );
 }
@@ -16,9 +31,14 @@ function Nav() {
 function App() {
   return (
     <div>
-      <Nav />
+      <div className="border-b border-stone-200 mb-12">
+        <Nav />
+      </div>
       <Router>
-        <DialogPreviews path="dialog" />
+        {previews.map((p) => {
+          const [Component, path] = p;
+          return <Component path={path} />;
+        })}
       </Router>
     </div>
   );
