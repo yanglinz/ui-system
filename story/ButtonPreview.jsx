@@ -11,6 +11,10 @@ function AlertButton() {
 
 export default function ButtonPreviews() {
   return [BasicButton, AlertButton].map((c) => {
-    return <PreviewStory>{c()}</PreviewStory>;
+    return (
+      <div className="mb-4">
+        <PreviewStory title={c.name}>{c()}</PreviewStory>
+      </div>
+    );
   });
 }
