@@ -1,6 +1,7 @@
 import { useState } from "preact/hooks";
 import { RootLayer } from "../src/Layer";
 import Dialog from "../src/Dialog";
+import DialogContent from "../src/DialogContent";
 import PreviewStory from "./PreviewStory";
 
 function DialogTrigger(props) {
@@ -14,7 +15,11 @@ function DialogTrigger(props) {
       >
         Open Dialog
       </button>
-      <Dialog isOpen={isOpen}>{props.children}</Dialog>
+      <Dialog isOpen={isOpen}>
+        <DialogContent onClose={() => setIsOpen(false)}>
+          {props.children}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
