@@ -1,5 +1,10 @@
+import useRestoreFocus from "./useRestoreFocus";
+
 function DialogContent(props) {
   const { onClose } = props;
+
+  useRestoreFocus();
+
   return (
     <div role="dialog" aria-modal className="w-8/12 mx-auto mt-16">
       <div className="relative bg-white p-6">
