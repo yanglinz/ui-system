@@ -1,4 +1,6 @@
 build/
 dist/
 storybook-static/
+test-results/
+playwright-report/
 package.json
