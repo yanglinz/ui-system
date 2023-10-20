@@ -105,6 +105,11 @@ function Layer(props) {
     return null;
   }
 
+  // TODO: Why does this happen?
+  if (!props) {
+    return null;
+  }
+
   return layer.node ? (
     <CurrentLayerContext.Provider value={layer}>
       {createPortal(props.children, layer.node)}

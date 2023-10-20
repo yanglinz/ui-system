@@ -27,7 +27,7 @@ function DialogTrigger(props) {
 
 function BasicDialog() {
   return (
-    <DialogTrigger buttonText="Open basic dialog">
+    <DialogTrigger buttonText="Open dialog">
       <h1>Basic Dialog</h1>
       <br />
       Here's a dialog component.
@@ -37,12 +37,12 @@ function BasicDialog() {
 
 function NestedDialog() {
   return (
-    <DialogTrigger buttonText="Open outer nested dialog">
+    <DialogTrigger buttonText="Open dialog">
       <h1>Nested Dialog</h1>
       <br />
       Here's a dialog component.
       <br />
-      <DialogTrigger buttonText="Open outer nested dialog">
+      <DialogTrigger buttonText="Open nested dialog">
         <h1>Nested Dialog Inner</h1>
         <br />
         Here's the nested dialog component.
