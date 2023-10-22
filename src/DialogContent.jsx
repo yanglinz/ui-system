@@ -1,3 +1,4 @@
+import { useCallback } from "preact/hooks";
 import useRestoreFocus from "./useRestoreFocus";
 import useOutsideClick from "./useOutsideClick";
 import FocusTrap from "./FocusTrap";
@@ -5,11 +6,13 @@ import { useCurrentLayer } from "./Layer";
 
 function DialogContent(props) {
   const layer = useCurrentLayer();
-  console.log("layer", layer);
-
   useRestoreFocus();
-  const ref = useOutsideClick(props.onClose);
 
+  const handleClose = useCallback(() => {
+    if (layer.isTop) props.onClose();
+  }, [layer, props.onClose]);
+
+  const ref = useOutsideClick(handleClose);
   return (
     <div ref={ref} role="dialog" aria-modal className="w-8/12 mx-auto mt-16">
       <FocusTrap>
