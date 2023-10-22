@@ -6,7 +6,7 @@ export default function FocusTrap(props) {
   // TODO: Conditionally trap focus based on whether current layer
   // is the top layer Get the top layer and only trap focus there.
   return (
-    <div className="--layer-trap-focus" ref={ref}> 
+    <div className="--layer-trap-focus" ref={ref}>
       {props.children}
     </div>
   );

@@ -1,11 +1,11 @@
 import useRestoreFocus from "./useRestoreFocus";
 import useOutsideClick from "./useOutsideClick";
 import FocusTrap from "./FocusTrap";
-import useCurrentLayer from './Layer';
+import { useCurrentLayer } from "./Layer";
 
 function DialogContent(props) {
   const layer = useCurrentLayer();
-  console.log('layer', layer);
+  console.log("layer", layer);
 
   useRestoreFocus();
   const ref = useOutsideClick(props.onClose);
