@@ -8,6 +8,8 @@ function DialogContent(props) {
   const layer = useCurrentLayer();
   useRestoreFocus();
 
+  // If there are multiple open dialogs e.g. nested dialogs, only
+  // close the dialog associated with the top most layer.
   const handleClose = useCallback(() => {
     if (layer.isTop) props.onClose();
   }, [layer, props.onClose]);
