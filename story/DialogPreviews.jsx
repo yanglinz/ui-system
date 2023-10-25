@@ -1,9 +1,8 @@
 import { useState } from "preact/hooks";
 import { RootLayer } from "../src/Layer";
-import Dialog from "../src/Dialog";
-import Button from "../src/Button";
-import DialogContent from "../src/DialogContent";
-import PreviewStory from "./PreviewStory";
+import { Dialog } from "../src/Dialog";
+import { DialogContent } from "../src/DialogContent";
+import { PreviewStory } from "./PreviewStory";
 
 function DialogTrigger(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +61,7 @@ const previews = [
   [NestedDialog, "Nested Dialog"],
 ];
 
-export default function DialogPreviews() {
+export function DialogPreviews() {
   return previews.map((p, i) => {
     const [Component, name] = p;
 

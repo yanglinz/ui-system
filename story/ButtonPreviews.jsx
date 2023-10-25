@@ -1,5 +1,5 @@
-import PreviewStory from "./PreviewStory";
-import Button from "../src/Button";
+import { PreviewStory } from "./PreviewStory";
+import { Button } from "../src/Button";
 
 function BasicButton() {
   return <Button>Hello world!</Button>;
@@ -14,7 +14,7 @@ const previews = [
   [AlertButton, "Alert Button"],
 ];
 
-export default function ButtonPreviews() {
+export function ButtonPreviews() {
   return previews.map((p) => {
     const [Component, title] = p;
     return (

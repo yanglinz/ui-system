@@ -1,10 +1,10 @@
 import { useCallback } from "preact/hooks";
-import useRestoreFocus from "./useRestoreFocus";
-import useOutsideClick from "./useOutsideClick";
-import FocusTrap from "./FocusTrap";
+import { useRestoreFocus } from "./useRestoreFocus";
+import { useOutsideClick } from "./useOutsideClick";
+import { FocusTrap } from "./FocusTrap";
 import { useCurrentLayer } from "./Layer";
 
-function DialogContent(props) {
+export function DialogContent(props) {
   const layer = useCurrentLayer();
   useRestoreFocus();
 
@@ -32,5 +32,3 @@ function DialogContent(props) {
     </div>
   );
 }
-
-export default DialogContent;
