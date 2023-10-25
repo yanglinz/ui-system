@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "preact/hooks";
 
-function useRestoreFocus() {
+export function useRestoreFocus() {
   const previouslyFocusedElement = useRef(null);
 
   useEffect(() => {
@@ -10,5 +10,3 @@ function useRestoreFocus() {
     };
   }, []);
 }
-
-export default useRestoreFocus;

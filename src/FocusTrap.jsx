@@ -1,6 +1,6 @@
 import { useFocusTrap } from "@mantine/hooks";
 
-export default function FocusTrap(props) {
+export function FocusTrap(props) {
   const ref = useFocusTrap();
 
   // TODO: Conditionally trap focus based on whether current layer

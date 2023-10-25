@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "preact/hooks";
 
-function useOutsideClick(callback) {
+export function useOutsideClick(callback) {
   const ref = useRef();
 
   useEffect(() => {
@@ -18,5 +18,3 @@ function useOutsideClick(callback) {
 
   return ref;
 }
-
-export default useOutsideClick;

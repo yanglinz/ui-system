@@ -1,4 +1,4 @@
-function PreviewStory(props) {
+export function PreviewStory(props) {
   return (
     <div className="px-4">
       <div className="md:w-8/12 md:mx-auto">
@@ -12,5 +12,3 @@ function PreviewStory(props) {
     </div>
   );
 }
-
-export default PreviewStory;

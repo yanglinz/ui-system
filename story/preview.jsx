@@ -1,11 +1,11 @@
 import Router from "preact-router";
-import ButtonPreview from "./ButtonPreview";
-import DialogPreviews from "./DialogPreviews";
+import { ButtonPreviews } from "./ButtonPreviews";
+import { DialogPreviews } from "./DialogPreviews";
 import { render } from "preact";
 import "./preview.css";
 
 const previews = [
-  [ButtonPreview, "button"],
+  [ButtonPreviews, "button"],
   [DialogPreviews, "dialog"],
 ];
 
