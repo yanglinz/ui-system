@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "preact/hooks";
+import { useEffect, useRef, useCallback } from "preact/hooks";
+import { useCurrentLayer } from "./Layer";
 
 export function useOutsideClick(callback) {
   const ref = useRef();
@@ -17,4 +18,14 @@ export function useOutsideClick(callback) {
   }, [ref]);
 
   return ref;
+}
+
+export function useLayerOutsideClick(callback) {
+  const layer = useCurrentLayer();
+
+  const wrappedCallback = useCallback(() => {
+    if (layer.isTop) callback();
+  }, [layer, callback]);
+
+  return useOutsideClick(wrappedCallback);
 }
