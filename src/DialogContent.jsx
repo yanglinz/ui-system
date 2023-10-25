@@ -1,20 +1,10 @@
-import { useCallback } from "preact/hooks";
 import { useRestoreFocus } from "./useRestoreFocus";
-import { useOutsideClick } from "./useOutsideClick";
+import { useLayerOutsideClick } from "./useOutsideClick";
 import { FocusTrap } from "./FocusTrap";
-import { useCurrentLayer } from "./Layer";
 
 export function DialogContent(props) {
-  const layer = useCurrentLayer();
   useRestoreFocus();
-
-  // If there are multiple open dialogs e.g. nested dialogs, only
-  // close the dialog associated with the top most layer.
-  const handleClose = useCallback(() => {
-    if (layer.isTop) props.onClose();
-  }, [layer, props.onClose]);
-
-  const ref = useOutsideClick(handleClose);
+  const ref = useLayerOutsideClick(props.onClose);
   return (
     <div ref={ref} role="dialog" aria-modal className="w-8/12 mx-auto mt-16">
       <FocusTrap>
