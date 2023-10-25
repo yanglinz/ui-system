@@ -1,6 +1,7 @@
 import { useState } from "preact/hooks";
 import { RootLayer } from "../src/Layer";
 import Dialog from "../src/Dialog";
+import Button from "../src/Button";
 import DialogContent from "../src/DialogContent";
 import PreviewStory from "./PreviewStory";
 
@@ -13,7 +14,7 @@ function DialogTrigger(props) {
         className="bg-stone-100 border border-stone-400 p-1 rounded-sm"
         onClick={() => setIsOpen(true)}
       >
-        Open Dialog
+        {props.buttonText}
       </button>
       <Dialog isOpen={isOpen}>
         <DialogContent onClose={() => setIsOpen(false)}>
@@ -26,16 +27,26 @@ function DialogTrigger(props) {
 
 function BasicDialog() {
   return (
-    <DialogTrigger>
+    <DialogTrigger buttonText="Open dialog">
       <h1>Basic Dialog</h1>
+      <br />
+      Here's a dialog component.
     </DialogTrigger>
   );
 }
 
 function NestedDialog() {
   return (
-    <DialogTrigger>
+    <DialogTrigger buttonText="Open dialog">
       <h1>Nested Dialog</h1>
+      <br />
+      Here's a dialog component.
+      <br />
+      <DialogTrigger buttonText="Open nested dialog">
+        <h1>Nested Dialog Inner</h1>
+        <br />
+        Here's the nested dialog component.
+      </DialogTrigger>
     </DialogTrigger>
   );
 }

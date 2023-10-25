@@ -80,7 +80,7 @@ export function RootLayer(props) {
   );
 }
 
-function Layer(props) {
+export function Layer(props) {
   const parentLayer = useCurrentLayer();
   let [layer, setLayer] = useState(null);
 
@@ -105,11 +105,14 @@ function Layer(props) {
     return null;
   }
 
+  // TODO: Why does this happen?
+  if (!props) {
+    return null;
+  }
+
   return layer.node ? (
     <CurrentLayerContext.Provider value={layer}>
       {createPortal(props.children, layer.node)}
     </CurrentLayerContext.Provider>
   ) : null;
 }
-
-export default Layer;
