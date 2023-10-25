@@ -80,7 +80,7 @@ export function RootLayer(props) {
   );
 }
 
-function Layer(props) {
+export function Layer(props) {
   const parentLayer = useCurrentLayer();
   let [layer, setLayer] = useState(null);
 
@@ -116,5 +116,3 @@ function Layer(props) {
     </CurrentLayerContext.Provider>
   ) : null;
 }
-
-export default Layer;
