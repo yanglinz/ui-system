@@ -3,12 +3,12 @@ import { useLayerOutsideClick } from "./useOutsideClick";
 import { useLayerKeyboardShortcut } from "./useKeyboardShortcut";
 import { FocusTrap } from "./FocusTrap";
 
-const KEYCODE_ESC = 27;
+const ESC = 27;
 
 export function DialogContent(props) {
   useRestoreFocus();
   useLayerKeyboardShortcut((event) => {
-    if (event.keyCode === KEYCODE_ESC) {
+    if (event.keyCode === ESC) {
       props.onClose();
     }
   });

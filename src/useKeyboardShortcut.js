@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback } from "preact/hooks";
+import { useEffect, useCallback } from "preact/hooks";
 import { useCurrentLayer } from "./Layer";
 
 export function useKeyboardShortcut(callback) {
