@@ -4,6 +4,13 @@ import { useCurrentLayer } from "./Layer";
 export function useKeyboardShortcut(callback) {
   useEffect(() => {
     function handleKeydown(event) {
+      // Don't handle event if the user is currently typing in a text area.
+      // TODO: Configure this based on a flag.
+      const currentlyFocusedType = document.activeElement?.type;
+      if (currentlyFocusedType === "textarea") {
+        return;
+      }
+
       if (event) {
         callback(event);
       }
