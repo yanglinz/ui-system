@@ -1,9 +1,17 @@
 import { useRestoreFocus } from "./useRestoreFocus";
 import { useLayerOutsideClick } from "./useOutsideClick";
+import { useLayerKeyboardShortcut } from "./useKeyboardShortcut";
 import { FocusTrap } from "./FocusTrap";
+
+const ESC = 27;
 
 export function DialogContent(props) {
   useRestoreFocus();
+  useLayerKeyboardShortcut((event) => {
+    if (event.keyCode === ESC) {
+      props.onClose();
+    }
+  });
   const ref = useLayerOutsideClick(props.onClose);
   return (
     <div ref={ref} role="dialog" aria-modal className="w-8/12 mx-auto mt-16">
