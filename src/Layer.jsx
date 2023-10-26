@@ -80,13 +80,16 @@ export function RootLayer(props) {
   );
 }
 
+const MISSING_PARENT_LAYER_WARNING =
+  "Layer component could not detect a parent layer. This may be caused by a missing `<RootLayer>` component at the root of the app tree.";
+
 export function Layer(props) {
   const parentLayer = useCurrentLayer();
   let [layer, setLayer] = useState(null);
 
   useLayoutEffect(() => {
-    // TODO: console.warn about missing RootLayer at the base of app tree.
     if (!parentLayer) {
+      console.warn(MISSING_PARENT_LAYER_WARNING);
       return;
     }
 
@@ -96,8 +99,8 @@ export function Layer(props) {
     return () => parentLayer.popLayer();
   }, [parentLayer]);
 
-  // TODO: console.warn about missing RootLayer at the base of app tree.
   if (!parentLayer) {
+    console.warn(MISSING_PARENT_LAYER_WARNING);
     return null;
   }
 
