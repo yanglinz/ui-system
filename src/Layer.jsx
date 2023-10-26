@@ -24,14 +24,11 @@ function createLayerDOMNode(id) {
 
 class LayerManager {
   constructor() {
-    // TODO: This need parentLayer as the input
     this.id = getLayerId();
     this.parentLayer = null;
     this.childLayer = null;
     this.node = createLayerDOMNode(this.id);
     this.isTop = false;
-
-    // TODO: in development mode, create a WeakMap of all layers
   }
 
   pushLayer(childLayer) {
@@ -51,7 +48,7 @@ class LayerManager {
   }
 
   destroy() {
-    // TODO: Handle DOM node cleanup
+    this.node.remove();
   }
 }
 
